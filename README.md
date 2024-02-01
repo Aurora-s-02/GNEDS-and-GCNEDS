@@ -54,5 +54,5 @@ The structure of data and code is as follows:
 ### Project Preparation:
 Download this project and unzip the dataset. You can directly download the archive, or run in your teminal.``` git clone https://github.com/Aurora-s-02/GNEDS-and-GCNEDS ```
 ### Data Preparation:
-Unzip MAVEN_ERE and OntoEvent-Doc datasets stored at. ``` ./Datasets ```
+Unzip [[超链接描述文本](超链接 "MAVEN_ERE")](https://drive.google.com/file/d/1bg9yYy8v6X9Zr--Rbn5VZAlDLzzL3UUi/view?usp=drive_link)https://drive.google.com/file/d/1bg9yYy8v6X9Zr--Rbn5VZAlDLzzL3UUi/view?usp=drive_link and OntoEvent-Doc datasets stored at. ``` ./Datasets ```
 
