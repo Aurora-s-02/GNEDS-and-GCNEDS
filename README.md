@@ -49,3 +49,9 @@ The structure of data and code is as follows:
 - torchmetrics==0.9.3
 - tqdm==4.66.1
 - transformers==4.31.0
+
+## Usage
+### Project Preparation:
+Download this project and unzip the dataset. You can directly download the archive, or run in your teminal.``` git clone https://github.com/Aurora-s-02/GNEDS-and-GCNEDS ```
+### Data Preparation:
+
