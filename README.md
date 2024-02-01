@@ -39,5 +39,13 @@ The structure of data and code is as follows:
 |-- data_utils.py
 |-- requirements.txt
 `-- run.sh
-
 ```
+## Requirements 
+- apex==0.9.10dev
+- dgl==1.1.2+cu118
+- ptvsd==4.3.2
+- scikit_learn==1.3.1
+- torch==2.1.0+cu118
+- torchmetrics==0.9.3
+- tqdm==4.66.1
+- transformers==4.31.0
