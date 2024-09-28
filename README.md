@@ -1,6 +1,7 @@
 # Event Type and Relationship Extraction Based on Dependent Syntactic Semantic Augmented Graph Networks
 
-Our papers are pre-printed on the [Event Type and Relationship Extraction Based on Dependent Syntactic Semantic Augmented Graph Networks](https://www.researchsquare.com/article/rs-3923678/v1)
+Our papers are pre-printed 
+[Event Type and Relationship Extraction Based on Dependent Syntactic Semantic Augmented Graph Networks](https://www.researchsquare.com/article/rs-3923678/v1)
 
 ## Brief Introduction
 In this study, two models, GNEDS and GCNEDS, are proposed to solve the trigger word and event type extraction task and the cross-sentence event relationship extraction task in documents, respectively. Dependent syntactic analysis is mainly utilized to enrich the intra-sentence semantic representation for the trigger word and event type extraction task, and then document nodes and sentence nodes are constructed to complete the cross-sentence event relation extraction task in documents.
