@@ -20,6 +20,7 @@ import json
 import codecs
 import logging
 import os
+import csv
 from typing import List
 
 import tqdm
@@ -103,15 +104,15 @@ class OntoEventProcessor(DataProcessor):
     
     def get_train_examples(self, data_dir):
         logger.info("LOOKING AT {} train".format(data_dir))
-        return self.create_examples(os.path.join(data_dir,'event_dict_on_doc_train.json'), "train", os.path.join(data_dir,'OutoEvent_dependent/train_tokens_dependent.json'))   # 修改增加依存句法的数据集
+        return self.create_examples(os.path.join(data_dir,'OntoEvent-Doc/event_dict_on_doc_train.json'), "train", os.path.join(data_dir,'OutoEvent_dependent/train_tokens_dependent.json'))   # 修改增加依存句法的数据集
 
     def get_valid_examples(self, data_dir):
         logger.info("LOOKING AT {} valid".format(data_dir))
-        return self.create_examples(os.path.join(data_dir,'event_dict_on_doc_valid.json'), "valid", os.path.join(data_dir,'OutoEvent_dependent/valid_tokens_dependent.json'))   # 修改增加依存句法的特征的数据集
+        return self.create_examples(os.path.join(data_dir,'OntoEvent-Doc/event_dict_on_doc_valid.json'), "valid", os.path.join(data_dir,'OutoEvent_dependent/valid_tokens_dependent.json'))   # 修改增加依存句法的特征的数据集
 
     def get_test_examples(self, data_dir):
         logger.info("LOOKING AT {} test".format(data_dir))
-        return self.create_examples(os.path.join(data_dir,'event_dict_on_doc_test.json'), "test", os.path.join(data_dir,'OutoEvent_dependent/test_tokens_dependent.json'))   # 修改增加依存句法的特征的数据集
+        return self.create_examples(os.path.join(data_dir,'OntoEvent-Doc/event_dict_on_doc_test.json'), "test", os.path.join(data_dir,'OutoEvent_dependent/test_tokens_dependent.json'))   # 修改增加依存句法的特征的数据集
 
     def get_labels4sent(self): # 句子的事件类型获取(从数据集中)
         file_path = ONTOEVENT_LABEL_PATH 
@@ -337,7 +338,45 @@ class MAVENEREProcessor(DataProcessor):
         dict2json(dict_docid2mentionids, MAVENERE_MENTION_ID_PATH)
         return examples
 
-     
+
+
+def _read_prompt_group(prompt_path):
+    with open(prompt_path, encoding='utf-8') as f:
+        lines = f.readlines()
+    prompts = dict()
+    for line in lines:
+        if not line:
+            continue
+        event_type, prompt = line.split(":")
+        prompts['Food'] = prompt
+    return prompts
+
+def _read_roles(self, role_path):
+    template_dict = {}
+    role_dict = {}
+
+    if 'MLEE' in role_path:
+        with open(role_path) as f:
+            role_name_mapping = json.load(f)
+            for event_type, mapping in role_name_mapping.items():
+                roles = list(mapping.keys())
+                role_dict[event_type] = roles
+
+        return None, role_dict
+
+    with open(role_path, "r", encoding='utf-8') as f:
+        csv_reader = csv.reader(f)
+        for line in csv_reader:
+            event_type_arg, template = line
+            template_dict[event_type_arg] = template
+
+            event_type, arg = event_type_arg.split('_')
+            if event_type not in role_dict:
+                role_dict[event_type] = []
+            role_dict[event_type].append(arg)
+
+    return template_dict, role_dict
+
 def json2dicts(jsonFile):
         data = []
         with codecs.open(jsonFile, "r", "utf-8") as f:
