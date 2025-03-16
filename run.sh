@@ -1,4 +1,4 @@
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/OntoEvent-Doc \
     --model_type gneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -23,7 +23,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/OntoEvent-Doc \
     --model_type gneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -48,7 +48,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/OntoEvent-Doc \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -73,7 +73,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir 
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/OntoEvent-Doc \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -98,7 +98,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/OntoEvent-Doc \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -123,7 +123,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/OntoEvent-Doc \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -148,7 +148,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/MAVEN_ERE \
     --model_type gneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -172,7 +172,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/MAVEN_ERE \
     --model_type gneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -196,7 +196,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/MAVEN_ERE \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -220,7 +220,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir 
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/MAVEN_ERE \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -244,7 +244,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/MAVEN_ERE \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -268,7 +268,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/MAVEN_ERE \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
@@ -292,7 +292,7 @@ python3 run_speech.py \
     --evaluate_during_training \
     --overwrite_output_dir
 
-python3 run_speech.py \
+python3 run.py \
     --data_dir ./Datasets/MAVEN_ERE \
     --model_type gcneds_distilbert \
     --model_name_or_path distilbert-base-uncased \
