@@ -33,13 +33,8 @@ The structure of data and code is as follows:
 |   `-- __MACOSX
 |       |-- MAVEN_ERE
 |       `-- OntoEvent-Doc
-|-- GCNEDS
-|   |-- gcneds_distilbert.py
-|   `-- run_gcneds.py
-|-- GNEDS
-|   |-- gneds_distilbert.py
-|   `-- run_gneds.py
 |-- data_utils.py
+|-- distilbert.py
 |-- requirements.txt
 `-- run.sh
 ```
